@@ -1,11 +1,11 @@
 {
    "version": "1.0",
    "manifest_version": 2,
-   "name": "Javascript Injector",
-   "permissions": ["http://*/*"],
+   "name": "Gipher",
+   "permissions": ["https://counsyl.slack.com/messages/*"],
    "content_scripts": [
    {
-       "matches": ["http://*/*","https://*/*"],
+       "matches": ["https://counsyl.slack.com/messages/*"],
        "js": [
            "inject.js"
        ]
