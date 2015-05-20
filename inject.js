@@ -42,7 +42,12 @@ function imageSearchCallback(responseText) {
   var gifs = results.responseData.results
   var rand = Math.floor(Math.random() * gifs.length)
   var gif = gifs[rand].unescapedUrl
+  gif = addCacheBuster(gif);
   sendGif(gif);
+}
+
+function addCacheBuster(gif) {
+  return gif + "?cache_buster_9000=" + new Date().getTime()
 }
 
 function sendGif(gif) {
