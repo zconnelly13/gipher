@@ -38,8 +38,10 @@ function searchGoogleForGif(query) {
 
 function imageSearchCallback(responseText) {
   var results = JSON.parse(responseText);
-  // path to the first gif result
-  var gif = results.responseData.results[0].unescapedUrl
+  // path to gif of random result
+  var gifs = results.responseData.results
+  var rand = Math.floor(Math.random() * gifs.length)
+  var gif = gifs[rand].unescapedUrl
   sendGif(gif);
 }
 
