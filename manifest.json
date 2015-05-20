@@ -4,11 +4,11 @@
    "name": "Gipher",
    "permissions": ["https://counsyl.slack.com/messages/*","https://ajax.googleapis.com/*"],
    "content_scripts": [
-   {
+     {
        "matches": ["https://counsyl.slack.com/messages/*"],
        "js": [
            "inject.js"
        ]
-   }
+     }
    ]
 }
